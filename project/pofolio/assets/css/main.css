@@ -742,7 +742,10 @@ footer .text {
     .project .row {
         flex-direction: column;
     }
-
+    .project .column{
+        margin: 0;
+        margin-top: 20px;
+    }
     .project .column+.column {
         margin: 40px 0 0 0;
         width: 100%;
@@ -778,5 +781,11 @@ footer .text {
         width: 100%;
         margin: auto;
         font-size: 10rem;
+    }
+    .contact .row{
+     flex-direction: column;   
+    }
+    .contact .column{
+        margin: 0 20px;
     }
 }
