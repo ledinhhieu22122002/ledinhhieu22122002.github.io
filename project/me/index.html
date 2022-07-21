@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/img/avatar.jpg">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <title>Lê Đình Hiếu</title>
+</head>
+
+<body>
+    <div id="root">
+    </div>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script type="text/babel">
+        const count = [
+            {
+                id: 2,
+                title: 'facebook',
+                color: '#5B7DB1',
+                icon: 'bi bi-facebook',
+                href: 'https://www.facebook.com/profile.php?id=100010060174571',
+            },
+            {
+                id: 3,
+                title: 'twitter',
+                color: '#81CACF',
+                icon: 'bi bi-twitter',
+                href: 'https://twitter.com/hieuvdjyh',
+            },
+            {
+                id: 4,
+                title: 'github',
+                color: '#2C3333',
+                icon: 'bi bi-github',
+                href: 'https://github.com/ledinhhieu22122002',
+            },
+        ]
+        const App = () => {
+            const Header = () => {
+                return (
+                    <header key='1'>
+                        <div className="img-heading">
+                            <img src="./assets/img/avatar.jpg" alt="ảnh đại diện của tôi" />
+                        </div>
+                        <div className="title-heading">Lê Đình Hiếu</div>
+                        <p className="text-heading">Tôi là một lập trình viên Website</p>
+                        <p className="text-heading">Bạn có thể liên hệ tôi qua dưới đây</p>
+                    </header>
+                )
+            }
+
+            const Contact = (props) => {
+                return (
+                    <section className="contact-section">
+                        <a className="btn-contact" href={props.href} target="_blank" rel="noopener noreferrer" style={{ color: props.color }}>{props.title} <i className={props.icon}></i></a>
+                    </section>
+                )
+            }
+            return (
+                <div className="warper">
+                    <div className="container">
+                        <Header />
+                        {count.map(coun => {
+                            return (
+                                <Contact
+                                    key={coun.id}
+                                    href={coun.href}
+                                    title={coun.title}
+                                    color={coun.color}
+                                    icon={coun.icon}
+                                />
+                            )
+                        })}
+                    </div>
+                </div >
+            )
+        }
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
+</body>
+
+</html>
