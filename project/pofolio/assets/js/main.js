@@ -1,3 +1,14 @@
+// onload event icon
+window.onload = () => {
+  function load() {
+    const loading = document.getElementById('onload__event');
+    const main = document.getElementById('main');
+    main.style.display = "block";
+    loading.style.display = "none";
+  }
+  setTimeout(load, 2000);
+  clearTimeout(load);
+};
 
 
 window.onscroll = () => { showHeader() };

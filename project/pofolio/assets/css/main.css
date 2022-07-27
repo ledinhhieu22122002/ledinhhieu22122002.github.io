@@ -37,9 +37,45 @@ body {
     font-size: 15px;
 }
 
-.main {
+#onload__event {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 1000;
+    background-color: #000;
+    transition: var(--smooth);
+    -webkit-transition: var(--smooth);
+    -moz-transition: var(--smooth);
+    -ms-transition: var(--smooth);
+    -o-transition: var(--smooth);
+}
+
+.event--load {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 70px;
+    width: 70px;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+#main {
+    display: none;
     overflow: hidden;
     background-color: var(--color-blue);
+    transition: var(--smooth);
+    -webkit-transition: var(--smooth);
+    -moz-transition: var(--smooth);
+    -ms-transition: var(--smooth);
+    -o-transition: var(--smooth);
 }
 
 .container {
@@ -742,50 +778,62 @@ footer .text {
     .project .row {
         flex-direction: column;
     }
-    .project .column{
+
+    .project .column {
         margin: 0;
         margin-top: 20px;
     }
+
     .project .column+.column {
         margin: 40px 0 0 0;
         width: 100%;
     }
-    .project__img{
+
+    .project__img {
         height: 400px;
     }
 }
 
-@media (max-width: 768px){
-    header ul{
+@media (max-width: 768px) {
+    header ul {
         width: 45%;
     }
 
-    .skill .row{
+    .skill .row {
         flex-direction: column;
     }
-    .skill .column{
+
+    .skill .column {
         width: 100% !important;
     }
-    .load-skill{
+
+    .load-skill {
         width: 90% !important;
         margin: auto;
         left: 0 !important;
     }
-    .load-skill span{
+
+    .load-skill span {
         display: none;
-    };
+    }
+
+    ;
+
     .icon-code .column {
         text-align: center;
     }
-    .icon-code i{
+
+    .icon-code i {
         width: 100%;
         margin: auto;
         font-size: 10rem;
     }
-    .contact .row{
-     flex-direction: column;   
+
+    .contact .row {
+        flex-direction: column;
     }
-    .contact .column{
+
+    .contact .column {
         margin: 0 20px;
     }
 }

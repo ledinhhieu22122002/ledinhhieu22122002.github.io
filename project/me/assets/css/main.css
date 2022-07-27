@@ -30,7 +30,7 @@ img {
     overflow: hidden;
 }
 
-.img-heading {
+.header__heading--img{
     width: 150px;
     height: 150px;
     margin: auto;
@@ -43,16 +43,18 @@ img {
     border: 1px solid #000;
 }
 
-.title-heading {
+.header__heading--title{
     text-align: center;
     font-size: 40px;
     margin-top: 20px;
     font-weight: bold;
 }
-.text-heading{
+
+.header__heading--desc{
     text-align: center;
 }
-.contact-section {
+
+.contact__section {
     margin-top: 30px;
     text-align: center;
 }
@@ -80,4 +82,14 @@ a {
 a:hover{
     background-color: #1B2430;
     color: white !important;
+}
+
+/* responsive */
+@media (max-width: 768px){
+    .contact__section{
+        padding: 0 10px;
+    }
+    a{
+        width: 100%;
+    }
 }

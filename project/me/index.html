@@ -44,21 +44,21 @@
         const App = () => {
             const Header = () => {
                 return (
-                    <header key='1'>
-                        <div className="img-heading">
+                    <header>
+                        <div className="header__heading--img">
                             <img src="./assets/img/avatar.jpg" alt="ảnh đại diện của tôi" />
                         </div>
-                        <div className="title-heading">Lê Đình Hiếu</div>
-                        <p className="text-heading">Tôi là một lập trình viên Website</p>
-                        <p className="text-heading">Bạn có thể liên hệ tôi qua dưới đây</p>
+                        <div className="header__heading--title">Lê Đình Hiếu</div>
+                        <p className="header__heading--desc">Tôi là một lập trình viên Website</p>
+                        <p className="header__heading--desc">Bạn có thể liên hệ tôi qua dưới đây</p>
                     </header>
                 )
             }
 
             const Contact = (props) => {
                 return (
-                    <section className="contact-section">
-                        <a className="btn-contact" href={props.href} target="_blank" rel="noopener noreferrer" style={{ color: props.color }}>{props.title} <i className={props.icon}></i></a>
+                    <section className="contact__section">
+                        <a className="contact--btn" href={props.href} target="_blank" rel="noopener noreferrer" style={{ color: props.color }}>{props.title} <i className={props.icon}></i></a>
                     </section>
                 )
             }
