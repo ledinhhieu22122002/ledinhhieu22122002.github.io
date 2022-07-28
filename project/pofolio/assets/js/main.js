@@ -10,8 +10,10 @@ window.onload = () => {
   clearTimeout(load);
 };
 
-
-window.onscroll = () => { showHeader() };
+window.onscroll = () => {
+  showHeader();
+  reveal();
+};
 const showHeader = () => {
   const header = document.querySelector('header');
   const slide = document.querySelector('.slide');
@@ -22,8 +24,21 @@ const showHeader = () => {
     slide.style.transform = 'translateY(100px)';
     header.classList.remove('sticky');
   }
-};
 
+};
+const reveal = () => {
+  const reveals = document.querySelectorAll('.reveal');
+  for (let i = 0; i < reveals.length; i++) {
+    const windowHeight = window.innerHeight;
+    const revealTop = reveals[i].getBoundingClientRect().top;
+    const revealPoint = 150;
+    if (revealTop < windowHeight - revealPoint) {
+      reveals[i].classList.add('active');
+    } else {
+      reveals[i].classList.remove('active');
+    }
+  }
+}
 // MENU BUTTON
 const menu = document.querySelector("ul");
 const menuButton = document.querySelector(".bart-btn");
